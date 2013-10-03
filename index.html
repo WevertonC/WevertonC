@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="DESKTOP GRIDS ECONOMY :   APLICAÇÃO DE VIRTUALIZAÇÃO NO DESENVOLVIMENTO DE UM PROTÓTIPO E IMPLANTAÇÃO DE DESKTOP GRIDS ECONOMY" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>DESKTOP GRIDS ECONOMY</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/WevertonC/WevertonC">View on GitHub</a>
+
+          <h1 id="project_title">DESKTOP GRIDS ECONOMY</h1>
+          <h2 id="project_tagline">  APLICAÇÃO DE VIRTUALIZAÇÃO NO DESENVOLVIMENTO DE UM PROTÓTIPO E IMPLANTAÇÃO DE DESKTOP GRIDS ECONOMY</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/WevertonC/WevertonC/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/WevertonC/WevertonC/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="este-trabalho-apresenta-um-pouco-da-inicia%C3%A7%C3%A3o-cientifica-que-participei-durante-a-gradua%C3%A7%C3%A3o-na-universidade-tecnol%C3%B3gica--federal-do-paran%C3%A1-campus-ponta-grossa-utfpr-pg-no-projeto-denominado-desktop-grids-economy-sendo-orientado-pelo-prof-dr-lourival-aparecido-de-g%C3%B3is" class="anchor" href="#este-trabalho-apresenta-um-pouco-da-inicia%C3%A7%C3%A3o-cientifica-que-participei-durante-a-gradua%C3%A7%C3%A3o-na-universidade-tecnol%C3%B3gica--federal-do-paran%C3%A1-campus-ponta-grossa-utfpr-pg-no-projeto-denominado-desktop-grids-economy-sendo-orientado-pelo-prof-dr-lourival-aparecido-de-g%C3%B3is"><span class="octicon octicon-link"></span></a>Este trabalho apresenta um pouco da iniciação cientifica que participei durante a graduação na Universidade Tecnológica  Federal do Paraná campus Ponta Grossa (UTFPR-PG), no projeto denominado Desktop Grids Economy sendo orientado pelo Prof. Dr Lourival Aparecido de Góis.</h3>
+
+<blockquote>
+<pre><code>Weverton Carvalho[Bolsista PIBIC/ Fundação Araucária]1 , Prof. Dr Lourival Aparecido de Góis                  [Orientador]1 , Rafael Santos de Almeida [Voluntário ]1  
+            1DAINF- Departamento Acadêmico de Informática                 
+                    Campus Ponta Grossa         
+            Universidade Tecnológica Federal do Paraná - UTFPR
+    Avenida Monteiro Lobato s/n Km 04 - CEP 84016-210- Ponta Grossa – PR
+    wevertoncarvalho34@gmail.com, gois@utfpr.edu.br,rafaels-almeida@hotmail.com
+</code></pre>
+</blockquote>
+
+<p>Resumo - Este artigo apresenta uma abordagem da utilização de virtualização e as vantagens na implantação de máquinas virtuais neste modelo. O modelo Desktop Grids Econnomy será apresentado, juntamente com os aspectos que a virtualização traz a este ambiente.
+Palavras-chave: Virtualização; Sistemas distribuídos; Grades; Desktop Grids Econnomy. </p>
+
+<p>Abstract - This article presents a discussion of the use of virtualization and the benefits in deployment of virtual machines in this model. The Desktop Grids Econnomy model will be presented, along with aspects that virtualization brings to this environment.
+Keywords: Virtualization; Distributed systems; Grids; Desktop Grids Econnomy.</p>
+
+<h2>
+<a name="introdu%C3%87%C3%83o" class="anchor" href="#introdu%C3%87%C3%83o"><span class="octicon octicon-link"></span></a>INTRODUÇÃO</h2>
+
+<p>A virtualização tem sido um dos assuntos em destaque na área de tecnologia da informação (TI), mesmo não sendo uma novidade. Surgiu no inicio dos anos 70, onde era comum que cada computador tivesse seu próprio sistema operacional de acordo com o seu fabricante. E essa foi uma das principais razões para o surgimento das maquinas virtuais.
+    Logo quando as quantidades de sistemas operacionais começaram a encaminhar se para poucas famílias (Unix, Microsoft e Macintosh), sendo que cada uma desenvolvia seus aplicativos para um publico alvo, a virtualização começou perder interesse. Ao longo do tempo com o aumento do poder de processamento e a crescente utilização de redes de computadores, assim como o uso de sistemas distribuídos e por outros motivos, a virtualização ressurgiu. 
+    Atualmente, com a crescente utilização de computadores pessoais independentes e interconectados, bem como o grande número de redes locais de uso privado, possibilitou a geração de novas plataformas computacionais destinadas à execução de aplicações distribuídas[1].
+    O modelo Desktop Grid Economy proposto especifica interesse por máquinas ociosas em determinados períodos onde se viabiliza um ambiente baseado em grades com princípios microeconômicos de forma a respaldar comercialmente os fornecedores deste processamento. O sistema de gerenciamento de recursos DGridE foi modelado a partir de uma plataforma desktop grids com arquitetura baseada no gerenciamento distribuído[2].
+    A seção Metodologia aborda o estudo desta modelagem  e aplicação da virtualização com seus aspectos funcionais. 
+A grande motivação para o uso desta modelagem é o grande poder computacional que poderá ser utilizado por usuários comuns através da web, viabilizando obter ganhos financeiros a partir da disponibilização de suas máquinas para o processamento, além de possuírem processamento a um preço acessível. Na virtualização temos os pontos de vista de vantagens em desenvolvimento, econômicas e otimização no desempenho.</p>
+
+<h2>
+<a name="metodologia" class="anchor" href="#metodologia"><span class="octicon octicon-link"></span></a>METODOLOGIA.</h2>
+
+<p>Durante a metodologia será apresentado o modelo do DGridE para um melhor entendimento e por fim a aplicação da virtualização.
+    Segundo Tanenbaum, um sistema distribuído é um conjunto de computadores independentes que aparentam aos usuários um sistema único[3]. Já, segundo Coulouris; Dollimore e Kindberg, um sistema distribuído seriam componentes de hardware e software conectados em rede que comunicam suas ações somente através de trocas de mensagens[4].</p>
+
+<h3>
+<a name="modelagem-e-conceito" class="anchor" href="#modelagem-e-conceito"><span class="octicon octicon-link"></span></a>Modelagem e conceito.</h3>
+
+<p>Este capítulo apresenta uma visão geral do sistema proposto de gerenciamento denominado Desktop Grid Economy para uma plataforma desktop grid. Nesta abordagem sugere se a associação dos participantes em cooperativas, bem como a integração das mesmas através de mecanismos de submissão e admissão de serviços.</p>
+
+<h3>
+<a name="defini%C3%A7%C3%A3o-dos-componentes" class="anchor" href="#defini%C3%A7%C3%A3o-dos-componentes"><span class="octicon octicon-link"></span></a>Definição dos componentes.</h3>
+
+<p>O sistema de gerenciamento de recursos DGridE, foi modelado a partir de uma plataforma desktop grid, com sua arquitetura baseada em sistemas distribuídos[5]. Este tipo de modelagem permite que fornecedores e consumidores de recursos possam ser organizados em cooperativas, onde são controladas por um gerente e unidas através de um contrato. Estas cooperativas podem trocar informações, desde que o diretor permita e faça esta intermediação entre as mesmas. A modelagem proposta pode ser melhor compreendida na figura 1.
+ <img src="http://s5.postimg.org/ll77efps7/ic1.png" alt="Arquitetura de Gerenciamento do DGridE">
+            Figura 1. Arquitetura de Gerenciamento do DGridE.
+Conforme na figura 1, os componentes do modelo DGridE proposto por Góis (2009), especifica as seguintes características de cada participante:
+    Consumidor: Componente que contêm funcionalidades que possibilitem a submissão de aplicações ao DGridE mediante um contrato firmado com o gerente.
+    Fornecedor: Aquele capaz de compartilhar seus recursos, baseado em um contrato de prestação de serviços firmado com o gerente.
+    Gerente: Responsável pelas transações efetuadas dentro da cooperativa sob sua coordenação. Também trata da contratação e autenticação de seus consumidores e fornecedores, é capaz de buscar e negociar recursos fora de seus domínios, gerencia o controle financeiro envolvendo consumo e fornecimento de recursos por meio de um escalonador de tarefas.
+    Diretor: Componente responsável pelas movimentações entre cooperativas.
+    Ainda, os fornecedores podem ser classificados como independentes ou corporativos. Os independentes são afiliados de acordo com o interesse do usuário em conectar-se à cooperativa, enquanto os corporativos apresentam um contrato de afiliação integrados com o DGridE, no qual serão definidos horários em que o equipamento será disponibilizado, ociosidade mínima requerida, identificadores de segurança de acesso, entre outros.
+    Considerando estas exigências, o mecanismo foi modelado de acordo com seguinte formalismo:
+d: diretor do mercado formado pelas cooperativas do DGridE;
+    C: cooperativa;
+    g: gerente de recursos;
+    c: consumidor de recursos;
+    f: fornecedor de recursos;
+    r: recurso do tipo r (CPU, disco, memória, entre outros);
+    s: ordem de serviço número s de um consumidor c.</p>
+
+<p>Funcionalidades e relacionamento entre os componentes e seus módulos. Pode se notar na figura   2 as especificações dos seguintes relacionamentos:
+   <img src="http://s5.postimg.org/ql9904ksn/ic2.jpg" alt="Relacionamento entre os componentes e seus módulos">
+        Figura 2 – Relacionamento entre os componentes e seus módulos.
+Módulo Consumidor:
+    -Acesso: Afiliação e acesso aos recursos da cooperativa.
+    -Controle de Serviços: formatação e envio de ordem de serviço ao gerente.
+    -Recepção de Resultados: Recepção e controle dos resultados enviados pelos fornecedores.
+    -Pagamentos: Controle do pagamento efetuado ao gerente pelos serviços utilizados.
+    Funcionalidades do Fornecedor:
+    -Acesso: Afiliação e acesso ao sistema de gerenciamento de recursos.
+    -Recursos: Levantamento e informação sobre os índices de disponibilidade dos recursos compartilhados.
+    -Carga e Execução: carga, execução e informação de resultados de aplicações ou tarefas relacionadas à ordens de serviços geradas pelos consumidores a partir de suas necessidades.
+    -Recebimentos: controle dos valores recebidos pelos recursos utilizados.
+    Módulos do gerente da cooperativa:
+    -Controle de Acesso: Responsável pelo controle de contrato e afiliação de consumidores e fornecedores, e do gerenciamento de permissões destes nas interações dentro da cooperativa. Também este é o módulo o qual trata da conexão com o diretor do DGridE.
+    -Controle de Recursos: Controle dos recursos e das informações enviadas pelos fornecedores.
+    -Admissão: Recepção e análise dos pedidos de serviços enviados pelos consumidores.
+    -Negociação Intra-Cooperativa: Negociação realizada dentro da cooperativa pelos recursos requeridos pela ordem de serviço.
+    -Negociação Inter-Cooperativa: Negociação realizada fora da cooperativa pelos recursos requeridos pela ordem de serviço.
+    -Contabilidade: Mecanismo o qual trata da formação dos preços dentro da cooperativa, bem como do controle de pagamento gerado nos processos de negociação de recursos.
+    Funcionalidades do Diretor:
+    -Conexão: Responsável pela interação entre os gerentes das cooperativas.
+    -Mercado: Centralização das informações necessárias ao gerenciamento do mercado de recursos.
+    -Leiloeiro: Abertura, recepção e fechamento de lances de leilão para o comércio de recursos entre as cooperativas.
+    Estes relacionamentos existentes permitem estabelecer o compartilhamento de recursos segundo regras estabelecidas e formalizadas através de contratos, de acordo com as necessidades e interesses dos integrantes. Desta forma, esta abordagem tem como objetivo, aumentar a confiabilidade da infraestrutura, a partir de um controle mais eficiente dos períodos de disponibilidade, o que nem sempre é possível com participações voluntárias.</p>
+
+<p>Utilização de modelos econômicos no compartilhamento de recursos. A partir destas funcionalidades dos componentes do DGridE, é possível definir o uso do modelo econômico pelo mesmo, visando, transformar os recursos computacionais em bens a serem comercializados. Tal modelo deve conter estratégias que possibilitem:
+    -Suportar submissão admissão de aplicações baseadas em requerimentos realizados pelo consumidor.
+    -Gerar e manter um mercado de consumo.
+    -Contabilizar e gerenciar o repasse dos fundos das transações existentes entre consumidor e fornecedor, e as negociações existentes entre gerentes, intermediadas pelo diretor.
+    -Incentivar a afiliação de novos fornecedores com a maximização dos lucros.
+    -Incentivar a afiliação de novos consumidores através da maximização de suas expectativas.
+    Tal como em qualquer mercado de bens, no mercado virtual seus integrantes também esperam participar das negociações maximizando suas expectativas. Com isto em mente, foram propostos três tipos de relacionamentos:
+    -Gerente x Fornecedor (gxf): No momento em que se realiza a afiliação de um fornecedor e gerente, será estabelecido um contrato de fornecedor, no qual devem constar todas as informações referentes aos recursos a serem disponibilizados. O gerente por sua vez, através de regras de normalização de índices de desempenho, registrará estes recursos atribuindo a cada um seu devido preço.       As disponibilidades serão informadas periodicamente pelo fornecedor, conforme critérios e estratégias pré-definidas.
+Gerente x Consumidor (gxc): A afiliação de um consumidor a uma cooperativa ocorre por intermédio do gerente, mediante um contrato de cadastramento e prestação de serviços. Este contrato define a forma como deve ser seguida a submissão de uma aplicação, formato de implementação, especificação de recursos, expectativas de desempenho e forma de pagamento. Todo recurso utilizado tem um custo, e este deve ser pago a cooperativa por intermédio do gerente, o qual repassará a parcela devida a cada fornecedor que teve seus resultados validados e confirmados.
+    Gerente x Diretor (gxd): Quando uma cooperativa não possui todos os recursos que um serviço exige, o gerente deverá negociar com o diretor, o qual mantém conexões com todas as cooperativas cadastradas ao DGridE. </p>
+
+<h3>
+<a name="a-virtualiza%C3%A7%C3%A3o" class="anchor" href="#a-virtualiza%C3%A7%C3%A3o"><span class="octicon octicon-link"></span></a>A virtualização.</h3>
+
+<p>Durante o estudo sobe virtualização, destacaram se dois conceitos que geralmente aparecem, estes são á emulação e simulação.
+    A simulação poder ser descrita como um sistema abstrato ou físico onde representa se através de um modelo matemático que possui características para o entendimento de seu funcionamento e comportamento. Simulador é um programa onde se tem um sistema que recebe parâmetros de entrada e condições iniciais que vem a auxiliar nas entradas e iniciando condições iniciais servindo para auxiliar na predição e analise de comportamento.
+    Segundo Houaiss, em um de seus sentidos, é o esforço para imitar ou tentar seguir o exemplo de alguém. Em computação, se entende como a capacidade de um programa de computador, ou algum tipo de dispositivo eletrônico imitar um programa ou dispositivo. O emulador é um programa que cria uma camada de software entre as plataformas de hóspede e hospedeira.
+    Sendo assim ele é capaz de executar os programas igualmente ao sistema original (hóspede) sobre o outro sistema (hospedeiro), durante a pesquisa muitos autores salientam que não importa como o emulador faz isso, ou como são os seus estados internos, mas sim o comportamento externo.
+R. Jain propõe a definição de que a simulation using hardware or firmware is called emulation[6].
+A. Singh diz .a simulator can be informally thought of as an accurate emulator[7].
+    Normalmente a definição consensual sobre virtualização é proposta por Singh, virtualização é um framework ou metodologia para dividir os recursos de um computador em múltiplos ambientes de execução, aplicando um, ou mais conceitos, e tecnologias como particionamento de software ou hardware, tempo compartilhado, simulação completa ou parcial da máquina, emulação e qualidade de serviços[7].
+Pradigamáticamente falando seria a técnica em que se permite particionar um único sistema computacional em vários outros sistemas totalmente separados.
+    O desperdício de processamento causado pelo não aproveitamento do investimento, sendo assim a virtualização pode vir a tratar deste problema fazendo com que se executem vários sistemas operacionais em um só meio físico. Deste modo cada aplicação é executada em seu respectivo sistema operacional ocasionando otimização no processamento e investimento.
+Outra característica importante é a portabilidade, um exemplo clássico é o desenvolvimento e teste de um programa. Pode se testar o software destinado a várias plataformas, de forma a não precisar de várias máquinas físicas com sistemas operacionais distintos[8]. Além de que em máquinas virtuais em desktops pode se implementar ambientes experimentais onde não pode se comprometer o sistema operacional anfitrião ou para a elaboração de sistemas em plataformas distribuídas como clusters e grades computacionais[9].</p>
+
+<h3>
+<a name="virtualiza%C3%A7%C3%A3o-de-desktops" class="anchor" href="#virtualiza%C3%A7%C3%A3o-de-desktops"><span class="octicon octicon-link"></span></a>Virtualização de desktops.</h3>
+
+<p>O uso de virtualização em servidores geralmente é a mais comumente citado pelos seus benefícios, porem aplicação desta técnica em desktops oferece uma série de vantagens. Primeiramente é uma ótima forma de testar novas configurações ou executar programas de sistemas operacionais diferentes do nativo[9].
+Em varias organizações onde se tem devido porte é muito comum o tempo de processamento de desktops serem subutilizados.
+Em organizações de um determinado porte é comum o tempo de processamento dos desktops ser subutilizado. Levando em conta que teríamos uma quantia de horas totais semanal de 168 horas e o uso de maquinas se da por 9 horas diárias, logo são 45 horas semanalmente. Então temos uma utilização aproximada de 27%, neste ambiente pode se empregar uma forma de recuperar o processamento usando o associamento de um descanso de tela uma maquina virtual, sendo assim quando o descanso de tela é ativado registra se uma maquina virtual em um servidor central formando um cluster de computadores virtuais. Este uso é derivado de programas peer-to-peer, um bom exemplo é o seti@home.</p>
+
+<h2>
+<a name="resultados-e-discuss%C3%95es" class="anchor" href="#resultados-e-discuss%C3%95es"><span class="octicon octicon-link"></span></a>RESULTADOS E DISCUSSÕES</h2>
+
+<p>Implantação em laboratório ocorreu em maquinas anfitriãs com o sistema operacional Ubunto 12.04 e convidado com sistema operacional Windows 7 64 bits, através do software Oracle VirtualBox 4.1.4.</p>
+
+<p>###Aplicando a virtualização.
+Visto que os primeiros softwares do projeto foram desenvolvidos visando à plataforma Windows e tinha-se a necessidade de testa-los, ocorreu se a necessidade de implantar se a virtualização, pois os computadores disponíveis estão em plataforma Linux, e por motivos de razão maior não pode se instalar o sistema operacional Windows nos mesmos, mas ao mesmo tempo instalar as maquinas virtuais proporcionariam um maior beneficio.
+    Como foi citado durante a metodologia, usufruindo da virtualização, pode-se ter mais segurança à testar um projeto em desenvolvimento, sem contar a vantagem de rodar várias máquinas lógicas em uma maquina física levando se em conta o desempenho do hardware da mesma, sem afetar os sistema operacional anfitrião.
+    O uso da virtualização neste projeto pode ser melhor entendida na figura 3.
+    <img src="http://s5.postimg.org/70q4jlutj/ic3.jpg" alt="Estrutura da virtualização na execução do protótipo">
+        Figura 3 – Estrutura da virtualização na execução do protótipo.
+    Na figura 3 pode se notar que sobre o hardware do sistema computacional A temos uma camada de software, o sistema operacional B(Linux) que fornece a virtualização, ou seja, uma máquina virtual C para as aplicações do sistema operacional C(Windows), que por sua vez são executadas dentro de uma máquina virtual Java (JVM . Java Virtual Machine).</p>
+
+<h2>
+<a name="conclus%C3%95es" class="anchor" href="#conclus%C3%95es"><span class="octicon octicon-link"></span></a>CONCLUSÕES</h2>
+
+<p>Analisando os aspectos da teoria do projeto DgridE assim como os da virtualização pode se notar as seguintes vantagens.
+    Os testes feitos em relação aos programas podem ser executados sem nenhum receio de comprometer o sistema operacional hospedeiro, visto que em termos de desenvolvimento de software esta é uma boa vantagem. Ainda na área de desenvolvimento pode vir a ser implementados softwares em diversas plataformas em um só hardware.
+    Verificando as condições de teste em relação ao laboratório pode se concluir aspectos de vantagens e desvantagens em cima do hardware, se o mesmo for de bom desempenho pode se ter varias instâncias de um mesmo sistema operacional em uma máquina física, aumentando o numero de máquinas virtuais para testes do protótipo. Porém pode se notar que se o hardware em si for de baixo desempenho, esta técnica não compensa, pois haverá um grande declínio no desempenho podendo afetar as conclusões e resultados.
+Mudando o foco para o futuro onde o projeto se consolida não como apenas um software íntegro e confiável, mas também como uma forma de se respaldar comercialmente os seus usuários a implantação do gerente das cooperativas podem vir a ser executados em um servidor, se acaso o software possuir varias versões para sistemas operacionais distintos e o gerente também vir a ser desenvolvida nestas circunstâncias, a virtualização pode melhorar o aproveitamento do desempenho e por consequência o investimento. 
+    Nesta mesma situação organizações de um determinado porte poderiam obter lucro através do DGridE, pois nos momentos ociosos máquinas virtuais viriam a ser ligadas de alguma forma durante esse tempo, executando o aplicativo disponibilizando as mesmas para o sistema em que usuários poderiam vir a usar estes recursos, e por consequência as organizações recebem o devido respaldo comercial. Em termos de segurança também seria uma ótima ideia, pois as máquinas virtuais não teriam nenhuma ligação que possa fornecer indevidos acessos à rede interna, é claro que se forem configuradas corretamente. 
+    Ao final depois dos fatores citados acima pode se deduzir que neste projeto notou se algumas das principais características benéficas que a virtualização traz sendo elas a economia, otimização do processamento, um ambiente propício para o desenvolvimento de softwares e a segurança.</p>
+
+<h2>
+<a name="agradecimentos" class="anchor" href="#agradecimentos"><span class="octicon octicon-link"></span></a>AGRADECIMENTOS</h2>
+
+<p>Gostaria de agradecer primeiramente a DEUS, ao professor Dr. Lourival Aparecido de Góis pela oportunidade de participar, ser orientado neste projeto e publicar este trabalho , a UTFPR Campus Ponta Grossa pelo espaço físico, ao amigos e parceiros pesquisadores neste projeto a meus pais pelo apoio e a todos que me incentivaram, assim com a Fundação Araucária pelo apoio financeiro.</p>
+
+<p>REFERÊNCIAS</p>
+
+<p>[1]GÓIS, L. A.; BORELLI, W. C. DGridE - Sistema de Gerenciamento para
+Compartilhamento e Comercialização de Recursos em um Desktop Grid. In: VII
+Workshop de Computação em Grade e Aplicações. Recife, 2009.
+[2]GÓIS, L. A.; BORELLI, W.C. Estratégias para Comercialização de Recursos Computacionais em Desktop Grids. Campinas, 2009. 
+[3]TANENBAUM, A. S. Distributed  Operating  Systems.  New  Jersey:  Prentice Hall, 1995.
+[4]COULOURIS, G. F.; DOLLIMORE, J.; KINDBERG, T. Distributed Systems: Concepts and Design. Addison-Wesley, 3ª ed., 2000.
+[5]STEEN, M. V.; TANENBAUM, A. S. Sistemas Distribuídos: princípios e paradigmas. São Paulo: Prentice Hall, 2ª ed., 2009.
+[6]JAIN, R. Art of Computer Systems Performance Analysis. John Willey, 1991.
+[7]SINGH, A. An introduction to virtualization.(<a href="http://www.kernelthread.com/publications">http://www.kernelthread.com/publications</a>)
+Acesso junho 2012.
+[8]SILBERCHATZ, A.; GALVIN, P. Sistemas Operacionais. 1ed. Campus, Rio de Janeiro, 2001.
+[9]SMITH, J. E.; NAIR, R. The architecture of virtual machines. IEEE Computer, 2005, v.38, n.5, p. 32-38.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">DESKTOP GRIDS ECONOMY maintained by <a href="https://github.com/WevertonC">WevertonC</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
